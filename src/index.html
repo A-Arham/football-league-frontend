@@ -1,13 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>FootballLeagueFrontend</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Football League</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <app-root></app-root>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>⚽ Ultimate Football League</h1>
+      <p>Where cities clash, and legends rise</p>
+    </div>
+  </header>
+
+  <main class="container layout-grid">
+
+    <!-- Matches -->
+    <section class="matches">
+      <h2>📅 Upcoming Matches</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Match</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>July 25</td>
+            <td>Team A vs Team B</td>
+            <td>Lahore</td>
+          </tr>
+          <tr>
+            <td>July 27</td>
+            <td>Team C vs Team A</td>
+            <td>Islamabad</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Cities -->
+    <section class="cities">
+      <h2>🌆 Cities Represented</h2>
+      <div class="city-grid">
+        <div class="city-card">
+          <div class="front">Lahore</div>
+          <div class="back">Home of Team A</div>
+        </div>
+        <div class="city-card">
+          <div class="front">Karachi</div>
+          <div class="back">Powerhouse of Team B</div>
+        </div>
+        <div class="city-card">
+          <div class="front">Islamabad</div>
+          <div class="back">Capital's Champions</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teams Sidebar -->
+    <aside class="teams">
+      <h2>🏆 Teams</h2>
+      <ul>
+        <li><strong>Team A</strong> - Lahore</li>
+        <li><strong>Team B</strong> - Karachi</li>
+        <li><strong>Team C</strong> - Islamabad</li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Football League. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
