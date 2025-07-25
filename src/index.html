@@ -40,8 +40,13 @@
 </section>
 <!-- Players Table -->
 <section class="players">
-  <h2>👥 Players</h2>
-  <table>
+  <div class="players-table-header">
+    <h2>👥 Players</h2>
+    <div class="players-search-bar">
+      <input type="text" id="playerSearch" placeholder="Search players by name..." oninput="filterPlayers()" />
+    </div>
+  </div>
+  <table id="playersTable">
     <thead>
       <tr>
         <th>Name</th>
@@ -89,6 +94,22 @@
   <footer>
     <p>&copy; 2025 Football League. All rights reserved.</p>
   </footer>
+
+  <script>
+function filterPlayers() {
+  const input = document.getElementById('playerSearch');
+  const filter = input.value.toLowerCase();
+  const table = document.getElementById('playersTable');
+  const trs = table.getElementsByTagName('tr');
+  for (let i = 1; i < trs.length; i++) { // skip header row
+    const td = trs[i].getElementsByTagName('td')[0];
+    if (td) {
+      const txtValue = td.textContent || td.innerText;
+      trs[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
+    }
+  }
+}
+</script>
 
 </body>
 </html>
