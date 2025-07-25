@@ -107,16 +107,35 @@
 
     <!-- Teams Sidebar -->
     <aside class="teams">
-      <div class="teams-header">
+      <div class="teams-table-header">
         <h2>🏆 Teams</h2>
-        <button type="button" id="addTeamBtn" onclick="addTeam()">Add Team</button>
-        <button type="button" id="deleteTeamBtn" onclick="deleteTeam()">Delete Team</button>
+        <div class="teams-buttons">
+          <button type="button" id="addTeamBtn" onclick="addTeam()">Add Team</button>
+          <button type="button" id="deleteTeamBtn" onclick="deleteTeam()">Delete Team</button>
+        </div>
       </div>
-      <ul>
-        <li><strong>Team A</strong> - Lahore</li>
-        <li><strong>Team B</strong> - Karachi</li>
-        <li><strong>Team C</strong> - Islamabad</li>
-      </ul>
+      <table id="teamsTable">
+        <thead>
+          <tr>
+            <th>Team Name</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Team A</td>
+            <td>Lahore</td>
+          </tr>
+          <tr>
+            <td>Team B</td>
+            <td>Karachi</td>
+          </tr>
+          <tr>
+            <td>Team C</td>
+            <td>Islamabad</td>
+          </tr>
+        </tbody>
+      </table>
     </aside>
 
   </main>
