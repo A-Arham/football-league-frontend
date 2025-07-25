@@ -15,55 +15,40 @@
 
   <main class="container layout-grid">
 
-    <!-- Matches -->
-    <!-- Past Matches -->
+    <!-- Matches Section -->
 <section class="matches">
   <h2>📜 Past Matches</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Match ID</th>
-        <th>Team 1</th>
-        <th>Team 2</th>
-        <th>Date</th>
-        <th>Team 1 Score</th>
-        <th>Team 2 Score</th>
-        <th>Winner</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Team A</td>
-        <td>Team B</td>
-        <td>July 20</td>
-        <td>2</td>
-        <td>1</td>
-        <td>Team A</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Team C</td>
-        <td>Team A</td>
-        <td>July 18</td>
-        <td>0</td>
-        <td>3</td>
-        <td>Team A</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Team B</td>
-        <td>Team C</td>
-        <td>July 15</td>
-        <td>1</td>
-        <td>1</td>
-        <td>Draw</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="matches-table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Match ID</th>
+          <th>Team 1</th>
+          <th>Team 2</th>
+          <th>Date</th>
+          <th>Team 1 Score</th>
+          <th>Team 2 Score</th>
+          <th>Winner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Team A</td><td>Team B</td><td>July 20</td><td>2</td><td>1</td><td>Team A</td></tr>
+        <tr><td>2</td><td>Team C</td><td>Team A</td><td>July 18</td><td>0</td><td>3</td><td>Team A</td></tr>
+        <tr><td>3</td><td>Team B</td><td>Team C</td><td>July 15</td><td>1</td><td>1</td><td>Draw</td></tr>
+        <!-- Extra dummy rows for scrollbar testing -->
+        <tr><td>4</td><td>Team D</td><td>Team E</td><td>July 10</td><td>3</td><td>2</td><td>Team D</td></tr>
+        <tr><td>5</td><td>Team F</td><td>Team G</td><td>July 05</td><td>1</td><td>0</td><td>Team F</td></tr>
+        <tr><td>6</td><td>Team H</td><td>Team I</td><td>July 01</td><td>2</td><td>2</td><td>Draw</td></tr>
+        <tr><td>7</td><td>Team J</td><td>Team A</td><td>June 28</td><td>0</td><td>1</td><td>Team A</td></tr>
+        <tr><td>8</td><td>Team B</td><td>Team D</td><td>June 24</td><td>1</td><td>3</td><td>Team D</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
-<!-- Players Table -->
-<section class="players">
+
+
+    <!-- Players Section -->
+     <section class="players">
   <div class="players-table-header">
     <h2>👥 Players</h2>
     <div class="players-search-bar">
@@ -72,71 +57,69 @@
       <button type="button" id="deletePlayerBtn" onclick="deletePlayer()">Delete Player</button>
     </div>
   </div>
-  <table id="playersTable">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Position</th>
-        <th>Team Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Adeel Khan</td>
-        <td>24</td>
-        <td>Forward</td>
-        <td>Team A</td>
-      </tr>
-      <tr>
-        <td>Bilal Sheikh</td>
-        <td>27</td>
-        <td>Midfielder</td>
-        <td>Team B</td>
-      </tr>
-      <tr>
-        <td>Hassan Ali</td>
-        <td>22</td>
-        <td>Defender</td>
-        <td>Team C</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="players-table-wrapper">
+    <table id="playersTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Position</th>
+          <th>Team Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Adeel Khan</td><td>24</td><td>Forward</td><td>Team A</td></tr>
+        <tr><td>Bilal Sheikh</td><td>27</td><td>Midfielder</td><td>Team B</td></tr>
+        <tr><td>Hassan Ali</td><td>22</td><td>Defender</td><td>Team C</td></tr>
+        <!-- Added dummy rows to test scrolling -->
+        <tr><td>Ali Raza</td><td>25</td><td>Goalkeeper</td><td>Team D</td></tr>
+        <tr><td>Omar Farooq</td><td>29</td><td>Forward</td><td>Team E</td></tr>
+        <tr><td>Usman Khalid</td><td>21</td><td>Midfielder</td><td>Team F</td></tr>
+        <tr><td>Faizan Ahmed</td><td>23</td><td>Defender</td><td>Team G</td></tr>
+        <tr><td>Zain Malik</td><td>28</td><td>Forward</td><td>Team H</td></tr>
+        <tr><td>Rehan Shah</td><td>26</td><td>Midfielder</td><td>Team I</td></tr>
+        <tr><td>Imran Khan</td><td>24</td><td>Defender</td><td>Team J</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 
     <!-- Teams Sidebar -->
-    <aside class="teams">
-      <div class="teams-table-header">
-        <h2>🏆 Teams</h2>
-        <div class="teams-buttons">
-          <button type="button" id="addTeamBtn" onclick="addTeam()">Add Team</button>
-          <button type="button" id="deleteTeamBtn" onclick="deleteTeam()">Delete Team</button>
-        </div>
-      </div>
-      <table id="teamsTable">
-        <thead>
-          <tr>
-            <th>Team Name</th>
-            <th>City</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Team A</td>
-            <td>Lahore</td>
-          </tr>
-          <tr>
-            <td>Team B</td>
-            <td>Karachi</td>
-          </tr>
-          <tr>
-            <td>Team C</td>
-            <td>Islamabad</td>
-          </tr>
-        </tbody>
-      </table>
-    </aside>
+     <aside class="teams">
+  <div class="teams-table-header">
+    <h2>🏆 Teams</h2>
+    <div class="teams-buttons">
+      <button type="button" id="addTeamBtn" onclick="addTeam()">Add Team</button>
+      <button type="button" id="deleteTeamBtn" onclick="deleteTeam()">Delete Team</button>
+    </div>
+  </div>
+  <div class="teams-table-wrapper">
+    <table id="teamsTable">
+      <thead>
+        <tr>
+          <th>Team Name</th>
+          <th>City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Team A</td><td>Lahore</td></tr>
+        <tr><td>Team B</td><td>Karachi</td></tr>
+        <tr><td>Team C</td><td>Islamabad</td></tr>
+        <tr><td>Team D</td><td>Multan</td></tr>
+        <tr><td>Team E</td><td>Faisalabad</td></tr>
+        <tr><td>Team F</td><td>Quetta</td></tr>
+        <tr><td>Team G</td><td>Peshawar</td></tr>
+        <tr><td>Team H</td><td>Gilgit</td></tr>
+        <tr><td>Team I</td><td>Skardu</td></tr>
+        <tr><td>Team J</td><td>Bahawalpur</td></tr>
+      </tbody>
+    </table>
+  </div>
+</aside>
+
+
+
 
   </main>
 
@@ -145,36 +128,40 @@
   </footer>
 
   <script>
-function filterPlayers() {
-  const input = document.getElementById('playerSearch');
-  const filter = input.value.toLowerCase();
-  const table = document.getElementById('playersTable');
-  const trs = table.getElementsByTagName('tr');
-  for (let i = 1; i < trs.length; i++) { // skip header row
-    const td = trs[i].getElementsByTagName('td')[0];
-    if (td) {
-      const txtValue = td.textContent || td.innerText;
-      trs[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
+    function filterPlayers() {
+      const input = document.getElementById('playerSearch');
+      const filter = input.value.toLowerCase();
+      const table = document.getElementById('playersTable');
+      const trs = table.getElementsByTagName('tr');
+      for (let i = 1; i < trs.length; i++) { // skip header row
+        const td = trs[i].getElementsByTagName('td')[0];
+        if (td) {
+          const txtValue = td.textContent || td.innerText;
+          trs[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
+        }
+      }
     }
-  }
-}
-function addPlayer() {
-  alert('Add Player button clicked!');
-  // Implement your add player logic here
-}
-function deletePlayer() {
-  alert('Delete Player button clicked!');
-  // Implement your delete player logic here
-}
-function addTeam() {
-  alert('Add Team button clicked!');
-  // Implement your add team logic here
-}
-function deleteTeam() {
-  alert('Delete Team button clicked!');
-  // Implement your delete team logic here
-}
-</script>
+
+    function addPlayer() {
+      alert('Add Player button clicked!');
+      // Implement your add player logic here
+    }
+
+    function deletePlayer() {
+      alert('Delete Player button clicked!');
+      // Implement your delete player logic here
+    }
+
+    function addTeam() {
+      alert('Add Team button clicked!');
+      // Implement your add team logic here
+    }
+
+    function deleteTeam() {
+      alert('Delete Team button clicked!');
+      // Implement your delete team logic here
+    }
+  </script>
 
 </body>
 </html>

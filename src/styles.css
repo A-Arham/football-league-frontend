@@ -120,6 +120,7 @@ thead {
   margin-top: 40px; /* Match .players spacing */
 }
 
+
 .teams-table-header {
   display: flex;
   justify-content: space-between;
@@ -530,6 +531,54 @@ footer {
     box-sizing: border-box;
   }
 }
+
+.teams-table-wrapper {
+  max-height: 240px; /* adjust height as needed */
+  overflow-y: auto;
+  /* Optional: add a subtle border or shadow for clarity */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Optional: to keep the table header fixed in scroll, you can try this (experimental and depends on browser) */
+#teamsTable thead tr {
+  position: sticky;
+  top: 0;
+  background-color: #f0f0f0;
+  z-index: 2;
+}
+.players-table-wrapper {
+  max-height: 280px; /* Adjust height as needed */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Sticky header to keep thead visible */
+#playersTable thead tr {
+  position: sticky;
+  top: 0;
+  background-color: #f0f0f0;
+  z-index: 2;
+}
+.matches-table-wrapper {
+  max-height: 300px; /* Adjust height as needed */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Sticky header for matches table */
+.matches-table-wrapper thead tr {
+  position: sticky;
+  top: 0;
+  background-color: #f0f0f0;
+  z-index: 2;
+}
+
 
 /* Fix header and footer alignment for all screens */
 header.hero, footer {
