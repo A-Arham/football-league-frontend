@@ -44,6 +44,8 @@
     <h2>👥 Players</h2>
     <div class="players-search-bar">
       <input type="text" id="playerSearch" placeholder="Search players by name..." oninput="filterPlayers()" />
+      <button type="button" id="addPlayerBtn" onclick="addPlayer()">Add Player</button>
+      <button type="button" id="deletePlayerBtn" onclick="deletePlayer()">Delete Player</button>
     </div>
   </div>
   <table id="playersTable">
@@ -108,6 +110,14 @@ function filterPlayers() {
       trs[i].style.display = txtValue.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
     }
   }
+}
+function addPlayer() {
+  alert('Add Player button clicked!');
+  // Implement your add player logic here
+}
+function deletePlayer() {
+  alert('Delete Player button clicked!');
+  // Implement your delete player logic here
 }
 </script>
 
